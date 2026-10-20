@@ -35,9 +35,19 @@ namespace rishis_toolbox {
         return numbers[name]
     }
 
+    function lerp(start: number, end: number, delta: number){
+        return start + (end - start) * delta
+    }
     /**
-     * TODO: describe your function here
+     * Use a small number like 0.01 for time
      * @param value describe value here, eg: 5
      */
     //% block
+    export function cameraGlide(sprite: Sprite, time: number){
+        const camX = scene.cameraProperty(CameraProperty.X)
+        const camY = scene.cameraProperty(CameraProperty.Y)
+        const x = lerp(camX, sprite.x, time)
+        const y = lerp(camY, sprite.y, time)
+        scene.centerCameraAt(x, y)
+    }
 }

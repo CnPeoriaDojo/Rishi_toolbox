@@ -10,7 +10,9 @@
         "main.ts",
         "README.md",
         "assets.json",
-        "numberSaver.ts"
+        "numberSaver.ts",
+        "tilemap.g.jres",
+        "tilemap.g.ts"
     ],
     "testFiles": [
         "test.ts"
