@@ -15,7 +15,7 @@ enum MyEnum {
  * Custom blocks
  */
 //% weight=100 color=#0fbc11 icon=""
-namespace numberSaver {
+namespace rishis_toolbox {
     let numbers: { [key: string]: number } = {}
     /**
      * TODO: describe your function here
