@@ -22,5 +22,5 @@ controller.moveSprite(mySprite2)
 
 tiles.setCurrentTilemap(tilemap`level1`)
 game.onUpdate(function(){
-    rishis_toolbox.cameraGlide(mySprite2, 0.01)
+    rishis_toolbox.cameraGlide(mySprite2, 0.9)
 })
