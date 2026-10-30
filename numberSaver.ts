@@ -46,8 +46,15 @@ namespace rishis_toolbox {
     export function cameraGlide(sprite: Sprite, time: number) {
         const camX = scene.cameraProperty(CameraProperty.X)
         const camY = scene.cameraProperty(CameraProperty.Y)
-        const x = lerp(camX, sprite.x+8, time)
-        const y = lerp(camY, sprite.y+4, time)
+        const x = lerp(camX, sprite.x + 8, time)
+        const y = lerp(camY, sprite.y + 4, time)
         scene.centerCameraAt(x, y)
+    }
+    
+    //% block
+    export function setGodMode(active: boolean, sprite: Sprite) {
+        sprite.setFlag(SpriteFlag.GhostThroughSprites, active)
+        sprite.setFlag(SpriteFlag.GhostThroughWalls, active)
+        sprite.setFlag(SpriteFlag.Ghost, active)
     }
 }
